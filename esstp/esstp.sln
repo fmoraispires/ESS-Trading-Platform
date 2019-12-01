@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "esstp", "esstp\esstp.csproj", "{E94E9501-BC6C-4BC7-A3D8-E62A7C6A1B4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E94E9501-BC6C-4BC7-A3D8-E62A7C6A1B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94E9501-BC6C-4BC7-A3D8-E62A7C6A1B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94E9501-BC6C-4BC7-A3D8-E62A7C6A1B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94E9501-BC6C-4BC7-A3D8-E62A7C6A1B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
