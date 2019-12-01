@@ -1,0 +1,90 @@
+﻿@using System.Threading.Tasks
+@using esstp.Models
+@using esstp.Models.Services
+@model IEnumerable<esstp.Models.ViewModels.PortfolioPageViewModel>
+
+
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<h1>Portfolio</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Units)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValueOpen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Invested)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentProfit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentInvested)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Current)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Units)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValueOpen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Invested)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentProfit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentInvested)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Current)
+            </td>
+            <td>
+                <a asp-action="Close" asp-route-id="@item.Id">Close</a> |
+                <a asp-action="ReadById" asp-route-id="@item.Id">Details</a> |
+                <!--<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>-->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

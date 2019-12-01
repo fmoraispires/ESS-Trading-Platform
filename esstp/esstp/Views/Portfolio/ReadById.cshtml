@@ -1,0 +1,83 @@
+﻿@model esstp.Models.ViewModels.PortfolioPositionViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CFD</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Symbol)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Symbol)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invested)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invested)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Units)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Units)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ValueOpen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ValueOpen)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Current)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Current)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StopLoss)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StopLoss)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TakeProfit )
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TakeProfit)
+        </dd>
+                <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CurrentProfit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CurrentProfit)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ReadPortfolio">Back to List</a>
+</div>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<esstp.Models.ViewModels.UserViewModel>
+
+@{
+    ViewData["Title"] = "ReadAll";
+}
+
+<h1>User</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nif)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsInactive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nif)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsInactive)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="ReadById" asp-route-id="@item.Id">Details</a> |
+                <!--<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>-->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

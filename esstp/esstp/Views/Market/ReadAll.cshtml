@@ -1,0 +1,74 @@
+﻿@using System.Threading.Tasks
+@using esstp.Models
+@using esstp.Models.Services
+@model IEnumerable<esstp.Models.ViewModels.MarketViewModel>
+
+
+@{
+    ViewData["Title"] = "Market";
+}
+
+<h1>Market</h1>
+
+<p>
+    <!--<a asp-action="Create">Create New</a>-->
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buying)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Selling)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Asset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buying)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Selling)
+            </td>
+            <td>
+                <a asp-action="Buy" asp-route-id="@item.Id">Buy</a> |
+                <a asp-action="Sell" asp-route-id="@item.Id">Sell</a> |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

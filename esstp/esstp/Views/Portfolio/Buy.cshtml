@@ -1,0 +1,73 @@
+﻿@model esstp.Models.ViewModels.PortfolioPositionViewModel
+
+@{
+    ViewData["Title"] = "CFD";
+}
+
+<h1>CFD</h1>
+
+<h4>Buy</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Buy">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <!--<label asp-for="Market_Id" class="control-label"></label>-->
+                <input type="hidden" asp-for="Market_Id" class="form-control" readonly/>
+                <!--<span asp-validation-for="Market_Id" class="text-danger"></span>-->
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" readonly/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Symbol" class="control-label"></label>
+                <input asp-for="Symbol" class="form-control" readonly/>
+                <span asp-validation-for="Symbol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <!--<label asp-for="Cfd_id" class="control-label"></label>-->
+                <input type="hidden" asp-for="Cfd_id" class="form-control" readonly/>
+                <!--<span asp-validation-for="Cfd_id" class="text-danger"></span>-->
+            </div>
+            <div class="form-group">
+                <label asp-for="BrokerMargin" class="control-label"></label>
+                <input asp-for="BrokerMargin" class="form-control" readonly/>
+                <span asp-validation-for="BrokerMargin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValueOpen" class="control-label"></label>
+                <input asp-for="ValueOpen" class="form-control" readonly/>
+                <span asp-validation-for="ValueOpen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invested" class="control-label"></label>
+                <input asp-for="Invested" class="form-control" />
+                <span asp-validation-for="Invested" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StopLoss" class="control-label"></label>
+                <input asp-for="StopLoss" class="form-control" />
+                <span asp-validation-for="StopLoss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TakeProfit" class="control-label"></label>
+                <input asp-for="TakeProfit" class="form-control" />
+                <span asp-validation-for="TakeProfit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buy" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ReadAll">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
