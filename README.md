@@ -28,7 +28,7 @@ Nesta pasta do GitHub, encontra a seguinte informação:
 
 * 1. Descarregue os scripts MySQL, e no workbench corra primeiro o script "create" e de seguida o script "populate".
 * 2. Descarregue a aplicação em csharp, e abra a solução com o visual studio community ou VS Code.
-* 3. Compile a aplicação e navegue nos menus.
+* 3. Compile a aplicação e navegue nos menus abrindo o browser em http://localhost:5000.
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/market.png" width="600px">
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/cfd-buy.png" width="300px">
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/portfolio.png" width="600px">
