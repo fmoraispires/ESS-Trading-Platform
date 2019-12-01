@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.18" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Market\" />
+    <Folder Include="Models\Services\" />
+    <Folder Include="Models\DataModels\" />
+    <Folder Include="Models\Helpers\" />
+    <Folder Include="Views\Portfolio\" />
+    <Folder Include="Models\ViewModels\" />
+    <Folder Include="Views\Operation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\User\Index.html" />
+  </ItemGroup>
+</Project>
