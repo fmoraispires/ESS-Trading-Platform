@@ -76,4 +76,4 @@ As rotas MVC da framework asp.net seguem o padrão /{ControllerName}/{ActionName
 
 
 <!-- Markdown -->
-[version]: https://img.shields.io/badge/version-8.0-brightgreen.svg
+[version]: https://img.shields.io/badge/version-7.0-brightgreen.svg
