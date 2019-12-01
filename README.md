@@ -10,6 +10,11 @@ O presente documento descreve o desenvolvimento de uma aplicação de negociaç�
 
 A aplicação suporta a gestão de utilizador, pesquisa de activos na página de mercado (Market), e realizar operações de compra/|venda de posições CFD na página portfolio, e fecho manual. Adicionalmente, pela parametrização dos valores de StopLoss e TakeProfit, as posições CFD são fechadas automáticamente. As posições fechadas são mostradas na página de Histórico, e as operações realizadas de abertura, fecho, e crédito/débitos das operações mostradas na página Operações. As páginas estão todas em inglês.
 
+Os CFDs de compra (buy) ficam associados ao valor de compra do ativo mais a margem de corretagem definida no no ficheiro {app.settings} no valor de 0.0005 do valor de venda por unidade. Os CDF de venda (sell) tem associado um valor de 0 (zero) à margem de corretagem.
+
+O vendedor (short) do ativo pagará ao comprador (long) a diferença entre o valor actual de um activo e o seu valor em tempo de fecho de contrato ( se a diferença for negativa então o comprador paga ao vendedor).
+
+Os valores de buying/selling são gerados periódicamente (parâmetro configurável no ficheiro {appsetting.json}). O valor por defeito é de "MaxPushTimeInSeconds": "5" segundos para uma notificação. Os valores podem ser visualizados refrescando a página {Market}. No caso do fecho automático, os CFDs são retirados e adicionados às páginas de forma automática, devendo-se refrescar a página para actualizar a informação processada.
 
 ## Conteúdo
 Nesta pasta do GitHub, encontra a seguinte informação:
@@ -25,6 +30,7 @@ Nesta pasta do GitHub, encontra a seguinte informação:
 * 2. Descarregue a aplicação em csharp, e abra a solução com o visual studio community ou VS Code.
 * 3. Compile a aplicação e navegue nos menus.
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/market.png" width="600px">
+<img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/cfd-buy.png" width="600px">
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/portfolio.png" width="600px">
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/portfolio-history.png" width="600px">
 <img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/operations.png" width="600px">
