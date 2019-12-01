@@ -24,8 +24,7 @@ Nesta pasta do GitHub, encontra a seguinte informação:
 * 1. Descarregue os scripts MySQL, e no workbench corra primeiro o script "create" e de seguida o script "populate".
 * 2. Descarregue a aplicação em csharp, e abra a solução com o visual studio community ou VS Code.
 * 3. Compile a aplicação e navegue nos menus.
-<img src="https://github.com/fmoraispires/Betting-House-Web-App/blob/master/part2/images/backend_endpoints.png" width="500px">
-<img src="https://github.com/fmoraispires/Betting-House-Web-App/blob/master/part2/images/welcomePage.png" width="500px">
+<img src="https://github.com/fmoraispires/ESS-Trading-Platform/blob/master/esstp/Views/market.png" width="500px">
 
 ## Organização do software
 
